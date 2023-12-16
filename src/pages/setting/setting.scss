@@ -1,0 +1,26 @@
+.setting{
+    display: flex;
+
+    .settingWrapper{
+        flex: 9;
+        padding: 20px;
+
+        .settingTitle{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .settingUpdateTitle{
+                font-size: 30px;
+                margin-bottom: 20px;
+                color: lightcoral;
+            }
+
+            .settingDeleteTitle{
+                color: red;
+                font-size: 12px;
+                cursor: pointer;
+            }
+        }
+    }
+}
