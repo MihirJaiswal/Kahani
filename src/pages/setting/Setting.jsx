@@ -6,14 +6,14 @@ export default function Setting() {
     <div className="setting">
       <div className="settingWrapper">
         <div className="settingTitle">
-          <span className="settingUpdateTitle">Update Your Account</span>
+          <span className="settingUpdateTitle"><i class="fa-solid fa-gear"></i> Update Your Account</span>
           <span className="settingDeleteTitle">Delete Account</span>
         </div>
         <form className="settingForm">
           <label>Profile Picture</label>
           <div className="settingPP">
             <img
-              src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+              src="./assets/img1.jpeg"
               alt=""
             />
             <label htmlFor="fileInput">
