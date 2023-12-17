@@ -48,11 +48,11 @@ export default function Topbar() {
             />
         ) : (
 
-          <ul className="top-list">
-            <li className="top-list-Item">
+          <ul style={{ display: "flex", justifyContent: "center", alignItems: "center", listStyle: "none"}}>
+            <li style={{marginRight: "20px", fontSize: "18px", fontWeight: 100, cursor: "pointer"}}>
             <Link className="link" to="/login">LOGIN</Link>
             </li>
-            <li className="top-list-item">
+            <li style={{marginRight: "20px", fontSize: "18px", fontWeight: 100, cursor: "pointer"}}>
             <Link className="link" to="/register">REGISTER</Link>
             </li>
           </ul>
