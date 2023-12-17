@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./login.scss"
 
 export default function Login() {
@@ -12,7 +13,7 @@ export default function Login() {
         <button className="loginButton">Login</button>
         <span className="loginForgot">Forgot Password?</span>
         <button className="loginRegisterButton">
-          Create a New Account
+          <Link className="link" to="/register">Register</Link>
         </button>
       </form>
     </div>

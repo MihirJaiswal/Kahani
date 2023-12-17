@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import "./Top-bar.scss"
 
 export default function Topbar() {
+  const user = false;
   return (
     <div className="top">
       <div className="top-left">
@@ -11,17 +13,51 @@ export default function Topbar() {
       </div>
       <div className="top-center">
         <ul className="top-list">
-          <li className="top-list-item">HOME</li>
-          <li className="top-list-item">ABOUT</li>
-          <li className="top-list-item">CONTACT</li>
-          <li className="top-list-item">WRITE</li>
-          <li className="top-list-item">LOGOUT</li>
+          <li className="top-list-item">
+          <Link className="link" to="/">
+          HOME
+          </Link>
+          </li>
+          <li className="top-list-item">
+            <Link className="link" to="/">
+            ABOUT
+            </Link>
+          </li>
+          <li className="top-list-item">
+          <Link className="link" to="/">
+          CONTACT
+          </Link>
+          </li>
+          <li className="top-list-item">
+          <Link className="link" to="/write">
+          WRITE
+          </Link>
+          </li>
+          <li className="top-list-item">
+          {user && "LOGOUT"}
+          </li>
         </ul>
       </div>
       <div className="top-right">
-        <img
-          className="top-img"
-          src="./assets/img1.jpeg"/>
+      {
+        user ? (
+          <img
+            className="top-img"
+            src="./assets/img1.jpeg"
+            alt=""
+            />
+        ) : (
+
+          <ul className="top-list">
+            <li className="top-list-Item">
+            <Link className="link" to="/login">LOGIN</Link>
+            </li>
+            <li className="top-list-item">
+            <Link className="link" to="/register">REGISTER</Link>
+            </li>
+          </ul>
+        )
+      }
           <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
